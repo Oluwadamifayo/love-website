@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For Ella | A Personal Space</title>
-    <!-- Google Fonts for High-End Serif & Clean Sans Body -->
+    <!-- Google Fonts: Playfair Display, Plus Jakarta Sans & Dancing Script -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,7 +21,22 @@
             <p class="hero-subtitle">A dedicated space celebrating quiet moments, shared memories, and everything ahead.</p>
         </header>
 
-        <!-- Personal Note Section -->
+        <!-- Interactive Envelope Trigger Section -->
+        <section class="section envelope-section">
+            <span class="section-label">A Special Note</span>
+            <div class="envelope-card" onclick="openModal()">
+                <div class="envelope-icon-wrap">
+                    <i class="fa-solid fa-envelope-open-text envelope-icon"></i>
+                </div>
+                <div class="envelope-info">
+                    <h3>I have smth to say abt U shaaaaa 😂😛</h3>
+                    <p class="envelope-preview">Ion actually know where to start from, with a space of one month u've occupied a great space in my heart dat no one else has...</p>
+                    <span class="read-more-btn">Read more <i class="fa-solid fa-chevron-right"></i></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personal Letter Section -->
         <section class="section">
             <div class="letter-wrapper">
                 <span class="section-label">A Letter to You</span>
@@ -64,5 +80,40 @@
         </footer>
     </main>
 
+    <!-- Sleek Pop-up Modal -->
+    <div class="modal-overlay" id="letterModal" onclick="closeModalOnOverlay(event)">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <span class="modal-tag">Personal Message</span>
+                <h2>I have smth to say abt U shaaaaa 😂😛</h2>
+            </div>
+            <div class="modal-body romantic-text">
+                <p>Ion actually know where to start from, with a space of one month u've occupied a great space in my heart dat no one else has, all d late nyt chats, romantic voice notes, Rizzing eachother, flirting, all of dem and lots more have actually meant allot to me, U r a very precious gem, Ur presence changes a negative atmosphere to a postive one not just positive, it brings atmosphere with nice vibes, love and care, U have actually made me soo happy dis past month, I'm actually happy to be one of Ur closest friends, u've amazed me lots of times, u've made Urself available weather convenient or inconvenient just to make me happy or feel less worried.</p>
+                <p>Elllaaaaaa, I actually have allot to say actually but words can't amount to how much Joy U bring to my heart, thanks for making me smile, for giving me a reason to trust Topdeal girls😂😂, thanks for being there for me, I know I've also made U soo happy, I know have made U feel loved and cared for, but I wouldn't just do it to a random person, it's someone with value and worth I would love to do dat to and dat's y I'm doing it to U.</p>
+                <p>Dis isn't d work of AI, I personally code dis and made this write up, cos ai can never make dis abbreviations I'm making jsuk.</p>
+                <p>Once again tnx for being a friend and someone special. This is just hw U make me feeling conversationally ooo, if I shld start writing hw U make me feel romantically, omoor we no go leave here 😂. Well, U mean allot to me. And I'm happy I make U smile each time we talk or meet.</p>
+                <p class="signature-text">Much love,<br>DarmCash😂😛😉</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById('letterModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('letterModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function closeModalOnOverlay(event) {
+            if (event.target === document.getElementById('letterModal')) {
+                closeModal();
+            }
+        }
+    </script>
 </body>
 </html>
