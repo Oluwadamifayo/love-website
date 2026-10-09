@@ -1,6 +1,6 @@
 :root {
     --bg-main: #fcf9f6;
-    --card-bg: rgba(255, 255, 255, 0.75);
+    --card-bg: rgba(255, 255, 255, 0.85);
     --text-primary: #2a2123;
     --text-secondary: #6e5e62;
     --accent-gold: #b38b59;
@@ -25,14 +25,71 @@ body {
     min-height: 100vh;
     padding: 60px 20px;
     -webkit-font-smoothing: antialiased;
+    position: relative;
+    overflow-x: hidden;
 }
 
+/* Subtle Romantic Background Lights & Heart Watermarks */
+body::before {
+    content: "";
+    position: fixed;
+    top: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(247, 214, 220, 0.45) 0%, rgba(252, 249, 246, 0) 70%);
+    z-index: -2;
+    pointer-events: none;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    bottom: -100px;
+    left: -100px;
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, rgba(244, 171, 183, 0.3) 0%, rgba(252, 249, 246, 0) 70%);
+    z-index: -2;
+    pointer-events: none;
+}
+
+/* Faint Heart Background Decor */
 .container {
     max-width: 720px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 40px;
+    position: relative;
+}
+
+.container::before {
+    content: "\f004";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: fixed;
+    top: 15%;
+    left: 5%;
+    font-size: 8rem;
+    color: rgba(230, 180, 190, 0.08);
+    z-index: -1;
+    pointer-events: none;
+    transform: rotate(-15deg);
+}
+
+.container::after {
+    content: "\f004";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: fixed;
+    bottom: 12%;
+    right: 5%;
+    font-size: 10rem;
+    color: rgba(230, 180, 190, 0.07);
+    z-index: -1;
+    pointer-events: none;
+    transform: rotate(20deg);
 }
 
 .hero {
@@ -141,6 +198,7 @@ body {
     gap: 20px;
     cursor: pointer;
     box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(8px);
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
@@ -376,5 +434,15 @@ body {
     .acronym-item {
         padding: 14px;
         gap: 12px;
+    }
+    
+    .container::before {
+        font-size: 5rem;
+        left: -10px;
+    }
+    
+    .container::after {
+        font-size: 6rem;
+        right: -10px;
     }
 }
