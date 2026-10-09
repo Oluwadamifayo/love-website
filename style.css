@@ -32,7 +32,7 @@ body {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 40px;
 }
 
 .hero {
@@ -130,6 +130,56 @@ body {
     margin-bottom: 10px;
 }
 
+/* Acronym Preview Card */
+.acronym-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    padding: 28px 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.acronym-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 35px rgba(179, 139, 89, 0.12);
+    border-color: var(--accent-gold);
+}
+
+.acronym-badge-wrap {
+    background: #fbf3e8;
+    border: 1px solid #f0dec5;
+    padding: 12px 18px;
+    border-radius: 14px;
+    flex-shrink: 0;
+}
+
+.acronym-badge {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.15em;
+    color: var(--accent-gold);
+}
+
+.acronym-preview-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    color: var(--accent-wine);
+    margin-bottom: 6px;
+}
+
+.acronym-preview-text {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
 .read-more-btn {
     font-size: 0.85rem;
     font-weight: 600;
@@ -137,69 +187,6 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-}
-
-/* Letter Wrapper */
-.letter-wrapper {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
-    padding: 40px;
-    box-shadow: var(--shadow-soft);
-    backdrop-filter: blur(8px);
-}
-
-.letter-body p {
-    font-size: 1.05rem;
-    color: var(--text-primary);
-    margin-bottom: 20px;
-    font-weight: 400;
-}
-
-.letter-signature {
-    display: block;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
-    font-style: italic;
-    color: var(--accent-wine);
-    margin-top: 30px;
-}
-
-/* Reflections Grid */
-.reflections-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.reflection-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 28px 22px;
-    box-shadow: var(--shadow-soft);
-}
-
-.card-number {
-    font-family: 'Playfair Display', serif;
-    font-size: 0.9rem;
-    color: var(--accent-gold);
-    display: block;
-    margin-bottom: 12px;
-}
-
-.reflection-card h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.15rem;
-    color: var(--accent-wine);
-    margin-bottom: 10px;
-    font-weight: 600;
-}
-
-.reflection-card p {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    line-height: 1.6;
 }
 
 /* Modal Overlay & Pop-up */
@@ -285,7 +272,7 @@ body {
     line-height: 1.3;
 }
 
-/* Romantic Font & Spacing Inside Modal */
+/* Romantic Text Styling */
 .romantic-text p {
     font-family: 'Dancing Script', cursive;
     font-size: 1.45rem;
@@ -294,11 +281,59 @@ body {
     margin-bottom: 18px;
 }
 
+/* Acronym Modal Breakdown List */
+.acronym-modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.acronym-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    background: var(--cream-pink-bg);
+    border: 1px solid var(--cream-pink-border);
+    padding: 18px;
+    border-radius: 16px;
+}
+
+.acronym-letter-badge {
+    width: 42px;
+    height: 42px;
+    background: var(--accent-wine);
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.acronym-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.6rem;
+    color: var(--accent-wine);
+    margin-bottom: 4px;
+    line-height: 1.2;
+}
+
+.acronym-desc {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
 .signature-text {
     font-family: 'Dancing Script', cursive !important;
     font-size: 1.6rem !important;
     color: var(--accent-wine) !important;
-    margin-top: 25px;
+    margin-top: 15px;
     font-weight: 700;
 }
 
@@ -325,14 +360,9 @@ body {
         font-size: 2.5rem;
     }
     
-    .envelope-card {
+    .envelope-card, .acronym-card {
         padding: 20px 16px;
         gap: 14px;
-    }
-
-    .envelope-icon-wrap {
-        width: 46px;
-        height: 46px;
     }
 
     .modal-content {
@@ -341,5 +371,10 @@ body {
 
     .romantic-text p {
         font-size: 1.3rem;
+    }
+
+    .acronym-item {
+        padding: 14px;
+        gap: 12px;
     }
 }

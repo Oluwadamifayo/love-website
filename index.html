@@ -24,7 +24,7 @@
         <!-- Interactive Envelope Trigger Section -->
         <section class="section envelope-section">
             <span class="section-label">A Special Note</span>
-            <div class="envelope-card" onclick="openModal()">
+            <div class="envelope-card" onclick="openModal('letterModal')">
                 <div class="envelope-icon-wrap">
                     <i class="fa-solid fa-envelope-open-text envelope-icon"></i>
                 </div>
@@ -36,25 +36,23 @@
             </div>
         </section>
 
-        <!-- Thoughtful Highlights Section -->
-        <section class="section">
-            <span class="section-label">Reflections</span>
-            <div class="reflections-grid">
-                <article class="reflection-card">
-                    <span class="card-number">01</span>
-                    <h3>Grace & Temperament</h3>
-                    <p>The effortless poise and sincerity you bring into every conversation and room you enter.</p>
-                </article>
-                <article class="reflection-card">
-                    <span class="card-number">02</span>
-                    <h3>Unspoken Warmth</h3>
-                    <p>How comfortable quiet moments feel when shared together, requiring no performance or pretense.</p>
-                </article>
-                <article class="reflection-card">
-                    <span class="card-number">03</span>
-                    <h3>Perspective</h3>
-                    <p>The refreshing clarity you offer and how naturally you encourage growth and reflection.</p>
-                </article>
+        <!-- Acronym Breakdown Trigger Section -->
+        <section class="section acronym-section">
+            <span class="section-label">What E.L.L.A Means To Me</span>
+            <div class="acronym-card" onclick="openModal('acronymModal')">
+                <div class="acronym-badge-wrap">
+                    <span class="acronym-badge">E.L.L.A</span>
+                </div>
+                <div class="acronym-preview-info">
+                    <h3>The Acronym Behind Your Name ✨</h3>
+                    <p class="acronym-preview-text">
+                        <strong>E</strong> — Exquisite Gem &nbsp;|&nbsp; 
+                        <strong>L</strong> — Laughter's Spark &nbsp;|&nbsp; 
+                        <strong>L</strong> — Luminous Soul &nbsp;|&nbsp; 
+                        <strong>A</strong> — An Absolute Blessing
+                    </p>
+                    <span class="read-more-btn">Tap to unveil full meaning <i class="fa-solid fa-chevron-right"></i></span>
+                </div>
             </div>
         </section>
 
@@ -64,16 +62,16 @@
         </footer>
     </main>
 
-    <!-- Sleek Pop-up Modal -->
-    <div class="modal-overlay" id="letterModal" onclick="closeModalOnOverlay(event)">
+    <!-- Sleek Pop-up Modal 1: Letter -->
+    <div class="modal-overlay" id="letterModal" onclick="closeModalOnOverlay(event, 'letterModal')">
         <div class="modal-content">
-            <button class="modal-close" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
+            <button class="modal-close" onclick="closeModal('letterModal')"><i class="fa-solid fa-xmark"></i></button>
             <div class="modal-header">
                 <span class="modal-tag">Personal Message</span>
                 <h2>I have smth to say abt U shaaaaa 😂😛</h2>
             </div>
             <div class="modal-body romantic-text">
-                <p>Ion actually know where to start from, with a space of one month u've occupied a great space in my heart dat no one else has, all d late nyt chats, romantic voice notes, Rizzing eachother, flirting, all of dem and lots more have actually meant allot to me, U r a very precious gem, Ur presence changes a negative atmosphere to a postive one not just positive, it brings atmosphere with nice vibes, love and care, U have actually made me soo happy dis past month, I'm actually happy to be one of Ur closest friends, u'wide amazed me lots of times, u've made Urself available weather convenient or inconvenient just to make me happy or feel less worried.</p>
+                <p>Ion actually know where to start from, with a space of one month u've occupied a great space in my heart dat no one else has, all d late nyt chats, romantic voice notes, Rizzing eachother, flirting, all of dem and lots more have actually meant allot to me, U r a very precious gem, Ur presence changes a negative atmosphere to a postive one not just positive, it brings atmosphere with nice vibes, love and care, U have actually made me soo happy dis past month, I'm actually happy to be one of Ur closest friends, u've amazed me lots of times, u've made Urself available weather convenient or inconvenient just to make me happy or feel less worried.</p>
                 <p>Elllaaaaaa, I actually have allot to say actually but words can't amount to how much Joy U bring to my heart, thanks for making me smile, for giving me a reason to trust Topdeal girls😂😂, thanks for being there for me, I know I've also made U soo happy, I know have made U feel loved and cared for, but I wouldn't just do it to a random person, it's someone with value and worth I would love to do dat to and dat's y I'm doing it to U.</p>
                 <p>Dis isn't d work of AI, I personally code dis and made this write up, cos ai can never make dis abbreviations I'm making jsuk.</p>
                 <p>Once again tnx for being a friend and someone special. This is just hw U make me feeling conversationally ooo, if I shld start writing hw U make me feel romantically, omoor we no go leave here 😂. Well, U mean allot to me. And I'm happy I make U smile each time we talk or meet.</p>
@@ -82,20 +80,74 @@
         </div>
     </div>
 
+    <!-- Sleek Pop-up Modal 2: Acronym Meaning -->
+    <div class="modal-overlay" id="acronymModal" onclick="closeModalOnOverlay(event, 'acronymModal')">
+        <div class="modal-content framed-modal">
+            <button class="modal-close" onclick="closeModal('acronymModal')"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <span class="modal-tag">Special Meaning</span>
+                <h2>E.L.L.A Breakdown ❤️</h2>
+            </div>
+            <div class="modal-body acronym-modal-body">
+                <div class="acronym-item">
+                    <div class="acronym-letter-badge">E</div>
+                    <div class="acronym-details">
+                        <h4 class="acronym-title">Exquisite Gem</h4>
+                        <p class="acronym-desc">(Unique, irreplaceable, and holding immense value)</p>
+                    </div>
+                </div>
+
+                <div class="acronym-item">
+                    <div class="acronym-letter-badge">L</div>
+                    <div class="acronym-details">
+                        <h4 class="acronym-title">Laughter's Spark</h4>
+                        <p class="acronym-desc">(The reason behind every genuine smile and good mood)</p>
+                    </div>
+                </div>
+
+                <div class="acronym-item">
+                    <div class="acronym-letter-badge">L</div>
+                    <div class="acronym-details">
+                        <h4 class="acronym-title">Luminous Soul</h4>
+                        <p class="acronym-desc">(A rare gem that turns any negative energy into positive vibes)</p>
+                    </div>
+                </div>
+
+                <div class="acronym-item">
+                    <div class="acronym-letter-badge">A</div>
+                    <div class="acronym-details">
+                        <h4 class="acronym-title">An Absolute Blessing</h4>
+                        <p class="acronym-desc">(The one who brought real warmth and genuine happiness into your world)</p>
+                    </div>
+                </div>
+
+                <div class="acronym-footer">
+                    <p class="signature-text">Always appreciated, Ella ✨</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
-        function openModal() {
-            document.getElementById('letterModal').classList.add('active');
-            document.body.style.overflow = 'hidden';
+        function openModal(id) {
+            const target = document.getElementById(id);
+            if (target) {
+                target.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
         }
 
-        function closeModal() {
-            document.getElementById('letterModal').classList.remove('active');
-            document.body.style.overflow = 'auto';
+        function closeModal(id) {
+            const target = document.getElementById(id);
+            if (target) {
+                target.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
         }
 
-        function closeModalOnOverlay(event) {
-            if (event.target === document.getElementById('letterModal')) {
-                closeModal();
+        function closeModalOnOverlay(event, id) {
+            if (event.target === document.getElementById(id)) {
+                closeModal(id);
             }
         }
     </script>
