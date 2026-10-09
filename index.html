@@ -3,90 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For My Special One ❤️</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>For Ella | A Personal Space</title>
+    <!-- Google Fonts for High-End Serif & Clean Sans Body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="hearts-container" id="hearts"></div>
-
-    <main class="wrapper">
-        <header class="hero-card">
-            <div class="heart-badge">✨ Made Just For You ✨</div>
-            <h1>To the Most Amazing Girl 💖</h1>
-            <p class="subtitle">Every day with you is a favorite memory in the making.</p>
+    <main class="container">
+        <!-- Hero Section -->
+        <header class="hero">
+            <span class="hero-tagline">Curated with intent</span>
+            <h1 class="hero-title">For Ella</h1>
+            <p class="hero-subtitle">A dedicated space celebrating quiet moments, shared memories, and everything ahead.</p>
         </header>
 
-        <section class="interactive-section">
-            <h2>A Little Reason Why You're Loved</h2>
-            <div class="note-box">
-                <p id="dynamic-text">Tap the button below to see a special note just for you...</p>
-            </div>
-            <button class="btn-love" onclick="generateNote()">Click For A Love Note 💌</button>
-        </section>
-
-        <section class="adoration-grid">
-            <div class="card">
-                <i class="fa-solid fa-gem card-icon"></i>
-                <h3>One of a Kind</h3>
-                <p>Your smile effortlessly lights up any room you walk into.</p>
-            </div>
-            <div class="card">
-                <i class="fa-solid fa-heart-pulse card-icon"></i>
-                <h3>Kind Heart</h3>
-                <p>The gentle way you care for people inspires everyone around you.</p>
-            </div>
-            <div class="card">
-                <i class="fa-solid fa-sparkles card-icon"></i>
-                <h3>Pure Magic</h3>
-                <p>Being with you makes even the plainest moments feel extraordinary.</p>
+        <!-- Personal Note Section -->
+        <section class="section">
+            <div class="letter-wrapper">
+                <span class="section-label">A Letter to You</span>
+                <div class="letter-body">
+                    <p>
+                        There are moments in life that subtly shift everything that comes after. Meeting you was one of those moments. Beyond the noise of everyday routines, your presence brings a natural calm and a warmth that is rare to find.
+                    </p>
+                    <p>
+                        This space was built to hold memories, shared quiet thoughts, and a lasting reminder of how deeply valued you are.
+                    </p>
+                    <span class="letter-signature">— Erastus</span>
+                </div>
             </div>
         </section>
 
-        <section class="letter-card">
-            <h2>Dear Special One,</h2>
-            <p>
-                Words often run short when trying to describe how much light you bring into my world. Your laughter, intelligence, and grace make you truly incredible. Thank you for simply being you!
-            </p>
+        <!-- Thoughtful Highlights Section -->
+        <section class="section">
+            <span class="section-label">Reflections</span>
+            <div class="reflections-grid">
+                <article class="reflection-card">
+                    <span class="card-number">01</span>
+                    <h3>Grace & Temperament</h3>
+                    <p>The effortless poise and sincerity you bring into every conversation and room you enter.</p>
+                </article>
+                <article class="reflection-card">
+                    <span class="card-number">02</span>
+                    <h3>Unspoken Warmth</h3>
+                    <p>How comfortable quiet moments feel when shared together, requiring no performance or pretense.</p>
+                </article>
+                <article class="reflection-card">
+                    <span class="card-number">03</span>
+                    <h3>Perspective</h3>
+                    <p>The refreshing clarity you offer and how naturally you encourage growth and reflection.</p>
+                </article>
+            </div>
         </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Designed with care for Ella</p>
+        </footer>
     </main>
 
-    <script>
-        const loveNotes = [
-            "Your laugh is easily the best sound in the entire world. ✨",
-            "Thank you for being my constant source of happiness and warmth. 💖",
-            "You make every single day brighter without even trying. 🌸",
-            "If I had a star for every time you made me smile, I'd be holding a galaxy. 🌌",
-            "You are remarkably smart, beautiful, and endlessly kind. 👑",
-            "Just a friendly reminder: You are deeply appreciated and loved! 🌹"
-        ];
-
-        function generateNote() {
-            const textElement = document.getElementById('dynamic-text');
-            const randomIndex = Math.floor(Math.random() * loveNotes.length);
-            textElement.style.opacity = '0';
-            
-            setTimeout(() => {
-                textElement.innerText = loveNotes[randomIndex];
-                textElement.style.opacity = '1';
-            }, 300);
-        }
-
-        function createHeart() {
-            const heart = document.createElement('div');
-            heart.classList.add('heart');
-            heart.innerHTML = '❤️';
-            heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.animationDuration = Math.random() * 3 + 2 + 's';
-            document.getElementById('hearts').appendChild(heart);
-
-            setTimeout(() => {
-                heart.remove();
-            }, 5000);
-        }
-
-        setInterval(createHeart, 400);
-    </script>
 </body>
 </html>
