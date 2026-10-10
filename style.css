@@ -63,7 +63,7 @@ body::after {
     position: relative;
 }
 
-/* Smaller, Elegant Background Heart Watermarks */
+/* Background Heart Watermarks */
 .container::before {
     content: "\f004";
     font-family: "Font Awesome 6 Free";
@@ -95,6 +95,22 @@ body::after {
 .hero {
     text-align: center;
     padding: 20px 0;
+    position: relative;
+}
+
+/* Additional Heart near Top Right */
+.hero::after {
+    content: "\f004";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    top: -10px;
+    right: 8%;
+    font-size: 3.2rem;
+    color: rgba(225, 140, 160, 0.2);
+    pointer-events: none;
+    transform: rotate(18deg);
+    z-index: -1;
 }
 
 .hero-tagline {
@@ -404,8 +420,24 @@ body::after {
 /* Footer */
 .footer {
     text-align: center;
-    padding-top: 20px;
+    padding-top: 30px;
     border-top: 1px solid var(--border-color);
+    position: relative;
+}
+
+/* Additional Heart near Footer */
+.footer::before {
+    content: "\f004";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    top: -15px;
+    left: 48%;
+    transform: translateX(-50%) rotate(-10deg);
+    font-size: 3.2rem;
+    color: rgba(225, 140, 160, 0.2);
+    pointer-events: none;
+    z-index: -1;
 }
 
 .footer p {
