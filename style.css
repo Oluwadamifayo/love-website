@@ -63,16 +63,16 @@ body::after {
     position: relative;
 }
 
-/* Bolder, More Visible Background Heart Watermarks */
+/* Smaller, Elegant Background Heart Watermarks */
 .container::before {
     content: "\f004";
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     position: fixed;
-    top: 15%;
-    left: 3%;
-    font-size: 11rem;
-    color: rgba(225, 140, 160, 0.18);
+    top: 18%;
+    left: 4%;
+    font-size: 4.5rem;
+    color: rgba(225, 140, 160, 0.22);
     z-index: -1;
     pointer-events: none;
     transform: rotate(-15deg);
@@ -83,10 +83,10 @@ body::after {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     position: fixed;
-    bottom: 10%;
-    right: 3%;
-    font-size: 13rem;
-    color: rgba(225, 140, 160, 0.16);
+    bottom: 15%;
+    right: 4%;
+    font-size: 5.5rem;
+    color: rgba(225, 140, 160, 0.20);
     z-index: -1;
     pointer-events: none;
     transform: rotate(20deg);
@@ -443,12 +443,12 @@ body::after {
     }
     
     .container::before {
-        font-size: 7rem;
-        left: -15px;
+        font-size: 3rem;
+        left: 10px;
     }
     
     .container::after {
-        font-size: 8rem;
-        right: -15px;
+        font-size: 3.5rem;
+        right: 10px;
     }
 }
