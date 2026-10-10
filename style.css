@@ -54,7 +54,6 @@ body::after {
     pointer-events: none;
 }
 
-/* Faint Heart Background Decor */
 .container {
     max-width: 720px;
     margin: 0 auto;
@@ -98,22 +97,28 @@ body::after {
 }
 
 .hero-tagline {
-    font-size: 0.8rem;
-    letter-spacing: 0.2em;
+    font-size: 0.78rem;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
     color: var(--accent-gold);
     font-weight: 600;
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
+/* Sleek, Mature & Dynamic Hero Title */
 .hero-title {
     font-family: 'Playfair Display', serif;
-    font-size: 3.2rem;
+    font-style: italic;
+    font-size: 3.6rem;
     font-weight: 500;
     color: var(--accent-wine);
-    margin-bottom: 15px;
-    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+    background: linear-gradient(135deg, #6b2d3e 0%, #a25268 50%, #b38b59 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
 }
 
 .hero-subtitle {
@@ -415,7 +420,7 @@ body::after {
     }
     
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
     }
     
     .envelope-card, .acronym-card {
